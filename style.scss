@@ -50,7 +50,7 @@ h2 {
 
 	max-width: var(--max-width-500);
 	background-color: #eee;
-	animation: fade-out 500ms ease forwards;
+	animation: fade-out 500ms ease-out forwards;
 	h2 {
 		color: orangered;
 	}

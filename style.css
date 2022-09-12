@@ -48,7 +48,7 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   max-width: var(--max-width-500);
   background-color: #eee;
-  animation: fade-out 500ms ease forwards;
+  animation: fade-out 500ms ease-out forwards;
 }
 .modal h2 {
   color: orangered;

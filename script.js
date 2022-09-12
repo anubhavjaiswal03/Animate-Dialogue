@@ -1,4 +1,4 @@
-const closeBtn = document.querySelector('.close-button');
+const closeModalButton = document.querySelector('.close-button');
 const openBtn = document.querySelector('.open-button');
 const modal = document.getElementById('modal');
 
@@ -6,10 +6,14 @@ openBtn.addEventListener('click', () => {
 	modal.showModal();
 });
 
-closeBtn.addEventListener('click', () => {
+closeModalButton.addEventListener('click', () => {
 	modal.setAttribute('close', '');
-	setTimeout(() => {
-		modal.removeAttribute('close');
-		modal.close();
-	}, 500);
+	modal.addEventListener(
+		'animationend',
+		() => {
+			modal.removeAttribute('close');
+			modal.close();
+		},
+		{ once: true }
+	);
 });
