@@ -7,7 +7,7 @@ openBtn.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-	modal.setAttribute('close', null);
+	modal.setAttribute('close', '');
 	setTimeout(() => {
 		modal.removeAttribute('close');
 		modal.close();
