@@ -1,16 +1,101 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap';
+
+:root {
+	--max-width-300: 300px;
+	--max-width-400: 400px;
+	--max-width-500: 500px;
+	--max-width-600: 600px;
+	--max-width-700: 700px;
+}
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	padding: 2rem;
+	font-family: system-ui, 'Montserrat', sans-serif;
 	height: 100vh;
-	overflow: hidden;
 	margin: 0;
+	background-color: #eee;
+}
+
+p {
+	max-width: var(--max-width-700);
+}
+
+h1,
+h2 {
+	margin: 0;
+	color: #333;
+}
+
+.button {
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	border: none;
+	background-color: #444;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #666;
+	}
+}
+.modal {
+	border-radius: 0.5rem;
+	border-color: orangered;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+	max-width: var(--max-width-500);
+	background-color: #eee;
+	animation: fade-out 500ms ease forwards;
+	h2 {
+		color: orangered;
+	}
+	button {
+		background-color: orangered;
+		&:hover {
+			background-color: red;
+		}
+		&:focus {
+			outline: #eee;
+		}
+	}
+	&::backdrop {
+		background-color: rgba(orangered, 0.2);
+		opacity: 0;
+	}
+
+	&[open] {
+		animation: fade-in 500ms ease forwards;
+		&::backdrop {
+			animation: fade-in 500ms ease forwards;
+		}
+	}
+	&[close] {
+		animation: fade-out 500ms ease forwards;
+		&::backdrop {
+			animation: fade-out 500ms ease forwards;
+		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	100% {
+		opacity: 0;
+	}
+	0% {
+		opacity: 1;
+	}
 }

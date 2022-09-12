@@ -1,22 +1,7 @@
-# Vanilla Frontend Project Boilerplate
+# Animate a `<dialog>` element
 
-This is a Frontend Development Boiler for Creatinf Vanilla(html, CSS, Javascript) Projects.
-We also try to make use of SASS whereever we can.
-
-To `install` `sass` enter the following in the terminal:
-
-```javascript
-npm install sass
-```
-
-To `auto` `transcompile` enter the following in the terminal:
-
-```javascript
-sass --watch sourcefile.scss:destinationfile.css
-```
-
-SASS [Documentation](https://sass-lang.com/documentation/).
+Using the `<dialog>` element and animating it using in-built attribute `open` and `showModal()` function along with a custom attribute `close`.
 
 <p align="center">
-  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+  <img src="https://media3.giphy.com/media/VqiScA4E8Z0bN0eqwN/giphy.gif?cid=790b76112bd655fb3b6847aae12ca2e30e0a2891462e5286&rid=giphy.gif&ct=g">
 </p>
